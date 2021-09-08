@@ -12,12 +12,50 @@ class Board
         this.ball = null;
     }
 
+    draw(element, kind)
+    {
+        switch(kind)
+        {
+            case "rectangle": 
+                this.ctx.fillRect(element.x,element.y,element.width, element.height);
+            break;
+        }
+    }
+
+    createBorderView()
+    {
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    }
+
+    createBar(x,y,width,height)
+    {
+        this.bars.push(
+            {
+                x: x,
+                y: y,
+                width: width,
+                height: height
+            });
+    }
+
+    createBarsView()
+    {
+        this.bars.forEach((bar) => 
+        {
+            this.draw(bar, "rectangle");
+        })
+    }
+
     createBoardView(canvas)
     {
         this.canvas = canvas;
-        this.canvas.width = this.width;
-        this.canvas.height = this.height;
+        this.createBorderView();  //Renderizacion de los borders
         this.ctx = this.canvas.getContext("2d");
+
+        this.createBar(20,100,40,100);
+        this.createBar(735,100,40,100);
+        this.createBarsView();    //Renderizacion de las barras
     }
 
     getElements()
