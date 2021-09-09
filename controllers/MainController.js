@@ -17,6 +17,7 @@ function play()
         {
             alert(game.winner + " ha ganado");
             playing = false;
+            document.getElementById("play_again").removeAttribute("hidden");
         }
     }
 
@@ -58,3 +59,11 @@ document.addEventListener("keydown", function(key)
         
     }
 });
+
+document.getElementById("play_again").addEventListener("click", function()
+{
+    board.bars = [];
+    board.createBoardView(canvas);
+    playing = true;
+    this.setAttribute("hidden", "hidden");
+})
