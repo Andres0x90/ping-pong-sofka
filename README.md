@@ -1,11 +1,11 @@
-Descripcion
-Juego de ping pong para sofkianos, realizado en javascript usando programacion orientada a objetos y utilizando el patron de diseño MVC
+<p><b>Descripcion</b>
+<p>Juego de ping pong para sofkianos, realizado en javascript usando programacion orientada a objetos y utilizando el patron de diseño MVC</p>
 
-Preguntas
-¿Que es JSON?
-¿Que es el DOM?
-¿Que son los eventos en javascript?
-¿Cual es la diferencia entre var y let?
-¿Que es una funcion anonima?
-¿Que tipo de lenguaje es javascript?
-¿Que es la asincronia en javascript?
+<b>Preguntas</b>
+<p>¿Que es JSON?</p>
+<p>¿Que es el DOM?</p>
+<p>¿Que son los eventos en javascript?</p>
+<p>¿Cual es la diferencia entre var y let?</p>
+<p>¿Que es una funcion anonima?</p>
+<p>¿Que tipo de lenguaje es javascript?</p>
+<p>¿Que es la asincronia en javascript?</p>
