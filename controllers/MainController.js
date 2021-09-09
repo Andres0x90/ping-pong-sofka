@@ -8,8 +8,12 @@ function play()
 {
     board.clearBoardContentView();    //Se limpian los componentes del tablero
     if (playing)
+    {
         board.createBoardContentView();  //Se renderizan los componentes del tablero
-        
+        board.ball.move();              // Mover la pelota
+        board.checkAnyCollition();      // Detectar colisiones de la pelota con las barras
+    }
+
     window.requestAnimationFrame(play);
 }
 
