@@ -4,37 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
+
     <title>Juego de ping pong - Sofka</title>
 </head>
 <body>
-    <h1>Juego de Ping Pong para sofkianos</h1>
-    <p>Sean bienvenidos sofkianos a un duelo a muerte de raquetas y pelotas, tambien
-        conocido como ping pong. Aqui la daras toda para ganar y posicionarte como el mejor
-        empleado de Sofkaland. Antes de empezar, te invito a leer las instrucciones
-    </p>
-    <p><b>INSTRUCCIONES</b></p>
-    <ol>
-        <li>
-            como puedes ver este es un juego de dos jugadores, los cuales tienen sus controles
-            independientes
-        </li>
-        <li>Los jugadores tienen como nombre Sofkiano1 y Sofkiano2</li>
-        <li>Sofkiano1 es jugador el que maneja la barra izquierda y Sofkiano 2 es el jugador 
-            que maneja la barra derecha
-        </li>
-        <li>Controles del Sofkiano1: <b>A  W</b></li>
-        <li>Controles del Sofkiano2: <b>Flecha Arriba  Flecha Abajo</b></li>
-    </ol>
+    <div class="container-fluid">
+        <h1>Juego de Ping Pong para sofkianos</h1>
+        <p>Sean bienvenidos sofkianos a un duelo a muerte de raquetas y pelotas, tambien
+            conocido como ping pong. Aqui la daras toda para ganar y posicionarte como el mejor
+            empleado de Sofkaland. Antes de empezar, te invito a leer las instrucciones
+        </p>
+        <p><b>INSTRUCCIONES</b></p>
+        <ol>
+            <li>
+                como puedes ver este es un juego de dos jugadores, los cuales tienen sus controles
+                independientes
+            </li>
+            <li>Los jugadores tienen como nombre Sofkiano1 y Sofkiano2</li>
+            <li>Sofkiano1 es jugador el que maneja la barra izquierda y Sofkiano 2 es el jugador 
+                que maneja la barra derecha
+            </li>
+            <li>Controles del Sofkiano1: <b>A  W</b></li>
+            <li>Controles del Sofkiano2: <b>Flecha Arriba  Flecha Abajo</b></li>
+        </ol>
+    
+        <p><b>PRESIONA LA TECLA SPACE PARA EMPEZAR SOFKIANO</b></p>
+        <p><b>PRESIONA DE NUEVO LA TECLA SPACE PARA PAUSAR O RENAUDAR EL JUEGO SOFKIANO</b></p>
+    
+        <h3 id="msg_start" hidden="hidden">JUEGA CON TODA LA 
+            <b style="color: red;">ACTITUD</b> Y A GANAR SOFKIANO
+        </h3>
+        <div><button class="btn btn-warning" hidden="hidden" id="play_again">Jugar otra ronda</button></div>
+    
+        <canvas id="canvas"></canvas>
+    
+        <table class="table table-striped">
+            <thead>
+                <th>Jugador</th>
+                <th>Score</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sofkiano 1</td>
+                    <td id="score_sf1">0</td>
+                </tr>
+                <tr>
+                    <td>Sofkiano 2</td>
+                    <td id="score_sf2">0</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <p><b>PRESIONA LA TECLA ENTER PARA EMPEZAR SOFKIANO</b></p>
+    </div>
 
-    <h3 id="msg_start" hidden="hidden">JUEGA CON TODA LA 
-        <b style="color: red;">ACTITUD</b> Y A GANAR SOFKIANO
-    </h3>
-    <div><button hidden="hidden" id="play_again">Jugar otra ronda</button></div>
-
-    <canvas id="canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
     <script src="../models/Board.js"></script>
     <script src="../models/Game.js"></script>

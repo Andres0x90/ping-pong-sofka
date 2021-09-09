@@ -17,6 +17,8 @@ function play()
         {
             alert(game.winner + " ha ganado");
             playing = false;
+            document.getElementById("score_sf1").innerText = game.scores[0];
+            document.getElementById("score_sf2").innerText = game.scores[1];
             document.getElementById("play_again").removeAttribute("hidden");
         }
     }
