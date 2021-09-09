@@ -9,9 +9,33 @@
 </head>
 <body>
     <h1>Juego de Ping Pong para sofkianos</h1>
+    <p>Sean bienvenidos sofkianos a un duelo a muerte de raquetas y pelotas, tambien
+        conocido como ping pong. Aqui la daras toda para ganar y posicionarte como el mejor
+        empleado de Sofkaland. Antes de empezar, te invito a leer las instrucciones
+    </p>
+    <p><b>INSTRUCCIONES</b></p>
+    <ol>
+        <li>
+            como puedes ver este es un juego de dos jugadores, los cuales tienen sus controles
+            independientes
+        </li>
+        <li>Los jugadores tienen como nombre Sofkiano1 y Sofkiano2</li>
+        <li>Sofkiano1 es jugador el que maneja la barra izquierda y Sofkiano 2 es el jugador 
+            que maneja la barra derecha
+        </li>
+        <li>Controles del Sofkiano1: <b>A  W</b></li>
+        <li>Controles del Sofkiano2: <b>Flecha Arriba  Flecha Abajo</b></li>
+    </ol>
+
+    <p><b>PRESIONA LA TECLA ENTER PARA EMPEZAR SOFKIANO</b></p>
+    <h3 id="msg_start" hidden="hidden">JUEGA CON TODA LA 
+        <b style="color: red;">ACTITUD</b> Y A GANAR SOFKIANO
+    </h3>
+    <button hidden="hidden" id="play_again">Jugar otra ronda</button>
     <canvas id="canvas"></canvas>
 
     <script src="../models/Board.js"></script>
+    <script src="../models/Game.js"></script>
     <script src="../controllers/MainController.js"></script>
 </body>
 </html>

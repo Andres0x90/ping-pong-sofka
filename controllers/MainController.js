@@ -3,6 +3,7 @@ let board = new Board(800,400);
 let playing = false; 
 
 board.createBoardView(canvas);  //Se renderiza el tablero por primera vez
+let game = new Game(board);
 
 function play()
 {
@@ -12,6 +13,11 @@ function play()
         board.createBoardContentView();  //Se renderizan los componentes del tablero
         board.ball.move();              // Mover la pelota
         board.checkAnyCollition();      // Detectar colisiones de la pelota con las barras
+        if (game.hasAnyPlayerWon())
+        {
+            alert(game.winner + " ha ganado");
+            playing = false;
+        }
     }
 
     window.requestAnimationFrame(play);
@@ -22,7 +28,10 @@ window.requestAnimationFrame(play);
 document.addEventListener("keydown", function(key)
 {
     if (key.code === "Space")
+    {
+        document.getElementById("msg_start").removeAttribute("hidden");
         playing = !playing;
+    }
 
 
     if (playing)
